@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Pokédex Regional</title>
+
+<!-- FAVICON: Pokédex holográfica -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect x='3' y='3' width='26' height='26' rx='6' fill='%230a0e1a' stroke='%2300e5ff' stroke-width='2'/><circle cx='11' cy='11' r='5' fill='%2300e5ff'/><circle cx='9.5' cy='9.5' r='1.6' fill='%23fff'/><circle cx='21' cy='9' r='1.6' fill='%23ff2d95'/><circle cx='25' cy='9' r='1.6' fill='%23b14dff'/><rect x='8' y='19' width='16' height='7' rx='2' fill='none' stroke='%2300e5ff' stroke-width='1.5'/></svg>">
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<!-- Fondo decorativo -->
+<div class="bg-grid"></div>
+<div class="bg-glow"></div>
+
+<header>
+    <div class="brand">
+        <span class="lens"></span>
+        <span class="leds">
+            <span class="led red"></span>
+            <span class="led yellow"></span>
+            <span class="led green"></span>
+        </span>
+        <h1 class="title"><a href="index.html">POKÉDEX <b>REGIONAL</b></a></h1>
+    </div>
+    <div class="tagline">SISTEMA DE ÍNDICE NACIONAL · GEN I–V</div>
+</header>
+
+<div class="container">
+
+    <!-- PANEL IZQUIERDO: LISTA -->
+    <section class="list-panel">
+
+        <div class="controls">
+
+            <div class="topbar">
+                <input type="text" id="search" class="search" placeholder="Buscar nombre o nº...">
+                <button id="randomBtn" class="icon-btn" title="Aleatorio">🎲</button>
+                <button id="shinyBtn" class="shiny-btn"><span>✦</span> SHINY</button>
+            </div>
+
+            <div class="filters">
+                <select id="regionFilter" class="sel">
+                    <option value="">Todas las regiones</option>
+                    <option value="kanto">Kanto (I)</option>
+                    <option value="johto">Johto (II)</option>
+                    <option value="hoenn">Hoenn (III)</option>
+                    <option value="sinnoh">Sinnoh (IV)</option>
+                    <option value="teselia">Teselia (V)</option>
+                </select>
+                <select id="typeFilter" class="sel">
+                    <option value="">Todos los tipos</option>
+                </select>
+            </div>
+
+            <div id="count" class="count"></div>
+
+        </div>
+
+        <div id="list" class="grid"></div>
+
+    </section>
+
+    <!-- PANEL DERECHO: DETALLE -->
+    <section class="dex-panel">
+
+        <div class="screen">
+
+            <div id="welcome" class="welcome">
+                <div class="pokeball"></div>
+                <p>SELECCIONA UN POKÉMON</p>
+                <span class="hint">Usa las flechas ◀ ▶ para navegar</span>
+            </div>
+
+            <div id="detail" class="detail hidden">
+
+                <div class="name-row">
+                    <h2 id="name"></h2>
+                    <button id="cryBtn" class="cry-btn" title="Escuchar grito">🔊</button>
+                </div>
+
+                <div class="hero">
+                    <img id="img" alt="pokemon">
+                </div>
+
+                <div id="types"></div>
+                <p id="desc"></p>
+                <div id="info"></div>
+                <div id="evo"></div>
+                <div id="stats"></div>
+
+                <audio id="cry"></audio>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</div>
+
+<script src="js/pokedex.js"></script>
+
+</body>
+</html>
