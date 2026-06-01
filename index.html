@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Pokédex Hoenn</title>
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header>
+    <h2 class="title"><a href="index.html">POKÉDEX HOENN</a></h2>
+</header>
+
+<div class="container">
+
+    <!-- LISTA POKÉMON -->
+    <div class="list">
+
+        <!-- BUSCADOR + BOTÓN SHINY -->
+        <div class="topbar">
+            <input
+                type="text"
+                id="search"
+                class="search"
+                placeholder="Buscar Pokémon..."
+            >
+            <button id="shinyBtn" class="shiny-btn">✨ Shiny: OFF</button>
+        </div>
+
+        <!-- LISTA DINÁMICA -->
+        <div id="list"></div>
+
+    </div>
+
+    <!-- PANEL DEX -->
+    <div class="dex">
+
+        <div class="screen">
+
+            <!-- NOMBRE -->
+            <h2 id="name">Selecciona un Pokémon</h2>
+
+            <!-- SPRITE -->
+            <img id="img" alt="pokemon">
+
+            <!-- TIPOS -->
+            <div id="types"></div>
+
+            <!-- DESCRIPCIÓN -->
+            <p id="desc"></p>
+
+            <!-- INFO EXTRA: habilidades, debilidades, total -->
+            <div id="info"></div>
+
+            <!-- STATS -->
+            <div id="stats"></div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- JS -->
+<script src="js/pokedex.js"></script>
+
+</body>
+</html>
